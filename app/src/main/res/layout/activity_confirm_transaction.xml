@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color_theme"
+    tools:context=".ConfirmTransactionActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:gravity="center"
+        android:text="Xác nhận giao dịch"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Sender Info -->
+    <TextView
+        android:id="@+id/tvSenderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:text="Người gửi:"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvSender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_margin"
+        android:padding="@dimen/textview_padding"
+        android:text="Tên người gửi"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSenderLabel" />
+
+    <!-- Receiver Info -->
+    <TextView
+        android:id="@+id/tvReceiverLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="Người nhận:"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size"
+
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSender" />
+
+    <TextView
+        android:id="@+id/tvReceiver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_margin"
+        android:padding="@dimen/textview_padding"
+        android:text="Tên người nhận"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReceiverLabel" />
+
+    <!-- Amount Info -->
+    <TextView
+        android:id="@+id/tvAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="Số tiền:"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReceiver" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_margin"
+        android:padding="@dimen/textview_padding"
+        android:text="Số tiền giao dịch"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountLabel" />
+
+    <!-- Message Info -->
+    <TextView
+        android:id="@+id/tvMessageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="Thông điệp:"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_margin"
+        android:padding="@dimen/textview_padding"
+        android:text="Nội dung giao dịch"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMessageLabel" />
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/huge_margin"
+        android:layout_marginTop="@dimen/huge_margin"
+        android:backgroundTint="@color/button_background"
+        android:padding="@dimen/textview_padding"
+        android:text="Xác nhận"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+    <!-- Cancel Button -->
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/huge_margin"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:padding="@dimen/textview_padding"
+        android:text="Hủy bỏ"
+        android:textSize="@dimen/normal_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnConfirm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

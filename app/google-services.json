@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "462283979473",
+    "project_id": "e-wallet-c610e",
+    "storage_bucket": "e-wallet-c610e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462283979473:android:643c679036a6f745f863f0",
+        "android_client_info": {
+          "package_name": "com.example.secure_e_wallet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4VMfESpVtDUoBnyZFN6XI3z-z34qd5A8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

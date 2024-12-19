@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_banking"
+        android:icon="@drawable/icons8_banking_48"
+        android:title="@string/banking" />
+    <item
+        android:id="@+id/item_deposit"
+        android:icon="@drawable/icons8_refund_64"
+        android:title="@string/deposit" />
+</menu>

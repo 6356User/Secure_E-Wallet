@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color_theme"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_padding"
+    tools:context=".EditInfoActivity">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_btn_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="@dimen/normal_margin"
+            android:padding="@dimen/textview_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_keyboard_return_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/textview_padding"
+            android:text="@string/edit_info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="@dimen/large_margin"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_view_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:padding="1dp"
+                android:text="@string/username"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/edt_username"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/huge_margin"
+                android:background="@color/edit_text_background"
+                android:hint="@string/enter_username"
+                android:padding="@dimen/textview_padding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:padding="1dp"
+                android:text="@string/gender"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/radio_gender"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radio_gender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/huge_margin"
+                android:background="@color/edit_text_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_username">
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/normal_margin"
+                    android:checked="true"
+                    android:text="@string/male"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/normal_text_size"
+                    app:buttonTint="@color/button_background" />
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/normal_margin"
+                    android:text="@string/female"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/normal_text_size"
+                    app:buttonTint="@color/button_background" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:padding="1dp"
+                android:text="@string/birthday"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toTopOf="@+id/linear_dob"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linear_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:layout_marginTop="@dimen/huge_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio_gender">
+
+                <TextView
+                    android:id="@+id/txt_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/edit_text_background"
+                    android:hint="@string/birthday"
+                    android:padding="@dimen/textview_padding"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/normal_text_size" />
+
+                <ImageView
+                    android:id="@+id/img_calendar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/huge_margin"
+        android:layout_marginVertical="@dimen/activity_padding"
+        android:backgroundTint="@color/red"
+        android:text="@string/save"
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold" />
+
+</LinearLayout>
